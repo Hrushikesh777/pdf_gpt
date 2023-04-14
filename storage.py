@@ -4,7 +4,6 @@ import marshal
 from scipy.spatial.distance import cosine
 import numpy as np
 import time
-from fastapi.exceptions import HTTPException
 
 from config import config
 from opeanai_utils import (
@@ -79,10 +78,7 @@ class MarshalStorage():
                 self.data = marshal.load(fp)
                 print(f"Data Loaded Successfully.")
         except Exception as e:
-            raise HTTPException(
-                status_code=404,
-                detail=f"Invalid namespace provided.",
-            )
+            print(f"Invalid filename provided. [{self.filename}]")
 
     def write_data(self):
         """

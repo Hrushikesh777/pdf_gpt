@@ -4,7 +4,6 @@ from langchain.text_splitter import MarkdownTextSplitter
 import re
 import unicodedata
 import time
-from fastapi.exceptions import HTTPException
 
 from opeanai_utils import get_openai_embeddings
 from storage import MarshalStorage
@@ -27,10 +26,7 @@ class PDFutil():
             with open(filepath, "rb") as fp:
                 pages = pdftotext.PDF(fp)
         except Exception as e:
-            raise HTTPException(
-                status_code=422,
-                detail=f"Not able able read file. Check if file is valid or currupted.",
-            )
+            raise ValueError("Not able able read file. Check if file is valid or currupted.")
 
         text = ""
         for i in range(len(pages)):
