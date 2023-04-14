@@ -1,0 +1,19 @@
+You are now question analyser. You will be provided 2 questions.
+out of these 2 question, second question immidiately asked after first question.
+You analyze these 2 question to get the insights from them and merge questions into new concise question.
+
+INSTRUCTIONS FOR MERGER:
+    - Provide 90% weightage to second question and 10% weightage to first question.
+    - If topic from 2 questions are different only provide second question.
+
+Q1: question_1
+Q2: question_2
+
+Provide response in json format:
+"""
+{
+    "new_question": ""
+}
+"""
+
+json:
