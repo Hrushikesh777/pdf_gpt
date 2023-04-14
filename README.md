@@ -40,6 +40,15 @@ for val in pdf_gpt.answer_question(question):
     print(val, end="", flush=True)
 ```
 This will provide output instreaming format.
+
+## Run using Gradio
+You can also try PDF-GPT by using user-interface.
+
+Just run `python run_gradio.py`.
+
+It will open web interface on url `http://127.0.0.1:7860` . Select namespace and ask question. Namespaces will auto populate based on binary files in marshal_storage folder.
+![UI using Gradio](imgs/gradio.png)
+
 ## Limitations
 Here instead of using any `vectorstore` , I'm storing embeddings just in binary file locally, cause I wanted to make it simple. 
 It will work pretty well till you have embeddings count less than 15000 (book with around 2000 pages) and will provide results in less than second.
