@@ -1,0 +1,7 @@
+langchain
+openai
+pdftotext
+numpy
+scipy
+pydantic
+gradio
