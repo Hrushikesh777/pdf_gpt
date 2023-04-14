@@ -12,7 +12,8 @@ def run():
     for val in pdf_gpt.answer_question(question):
         print(val, end="", flush=True)
 
-    question = "what explain in simple terms"
+    # follow-up question
+    question = "explain in simple terms"
     for val in pdf_gpt.answer_question(question):
         print(val, end="", flush=True)
 
