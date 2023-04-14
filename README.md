@@ -44,3 +44,4 @@ This will provide output instreaming format.
 Here instead of using any `vectorstore` , I'm storing embeddings just in binary file locally, cause I wanted to make it simple. 
 It will work pretty well till you have embeddings count less than 15000 (book with around 2000 pages) and will provide results in less than second.
 
+>Checkout medium article for this: https://medium.com/@hrushikeshvanga777/introducing-pdf-gpt-2e619b964cc3
